@@ -5,7 +5,8 @@ build:
         name: Unit test
         code: |
           #./gradlew testDebug
-deploy:
+
+distribute-apk:
   steps:
     - script:
         name: Distribute APK
