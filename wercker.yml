@@ -1,14 +1,15 @@
-box: horie1024/wercker-android-build:0.1
+box: 
+  id: horie1024/werckerandroidsample:0.2-ubuntu
 build:
   steps:
     - script:
-        name: Unit test
+        name: Assemble Debug
         code: |
-          #./gradlew testDebug
+          ./gradlew assembleDebug
 
 distribute-apk:
   steps:
     - script:
         name: Distribute APK
         code: |
-         #- ./gradlew assembleDebug crashlyticsUploadDistributionRelease 
+          # - nothing to do.
